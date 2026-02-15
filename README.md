@@ -2,9 +2,9 @@
 
 > Proprietary Software — DoItBetter Studio
 
-**Atlas** is a core component of the Glyphborn engine ecosystem.
+**Atlas** is the world and spatial data engine powering the Glyphborn ecosystem.
 
-Development began in August 2025 as part of a long-term effort to build a modular, deterministic game engine and editor suite.
+Development began in August 2025 as part of DoItBetter Studio’s long-term effort to build a modular, deterministic game engine and editor suite.
 
 ---
 
@@ -12,12 +12,17 @@ Development began in August 2025 as part of a long-term effort to build a modula
 
 Atlas is responsible for:
 
-- [Primary responsibility 1]
-- [Primary responsibility 2]
-- [Primary responsibility 3]
-- [Primary responsibility 4]
+- Tile and grid management
+- World layout representation
+- Spatial queries and coordinate systems
+- Multi-floor world structuring
+- Floor-based visibility coordination
+- Map serialization and deserialization
+- Deterministic world state handling
 
-It defines and manages a specific domain within the engine architecture while remaining decoupled from presentation and runtime systems.
+Atlas defines how space is structured, queried, and persisted within the engine.
+
+It provides authoritative world data while remaining fully decoupled from rendering, audio, and gameplay systems.
 
 ---
 
@@ -27,29 +32,34 @@ The Glyphborn ecosystem is intentionally modular.
 
 Atlas handles:
 
-✔ [Core domain handled]
+✔ World topology and structure  
+✔ Coordinate systems and spatial reasoning  
+✔ Floor-aware data organization  
+✔ Deterministic world state  
 
 Atlas does **not** handle:
 
 ✖ Rendering  
-✖ Audio (unless this is Echo)  
-✖ Game rules  
+✖ Audio  
+✖ Game rules or combat logic  
 ✖ Networking  
 ✖ UI  
 
-This separation ensures long-term maintainability, scalability, and clean dependency boundaries.
+This strict separation ensures architectural clarity, clean dependencies, and long-term maintainability.
+
+Atlas is designed to remain engine-agnostic and free of presentation-layer concerns.
 
 ---
 
 ## Design Principles
 
-All DoItBetter Studio engine tools follow these principles:
+Atlas follows the core engineering principles established by DoItBetter Studio:
 
-- **Deterministic Behavior**  
-- **Engine-Agnostic Core Logic**  
-- **Strict Separation of Concerns**  
-- **Modular Versioning**  
-- **Testability First**  
+- **Deterministic Behavior** — Identical inputs produce identical world states  
+- **Engine-Agnostic Core Logic** — No rendering or framework coupling  
+- **Strict Separation of Concerns** — Clear domain boundaries  
+- **Modular Versioning** — Independent repository and release cycle  
+- **Testability First** — Logic designed for isolated validation  
 
 ---
 
@@ -57,20 +67,19 @@ All DoItBetter Studio engine tools follow these principles:
 
 Atlas integrates with:
 
-- Atlas — World & spatial systems  
 - Echo — Audio systems  
-- Mapper — Tooling & editor workflows  
-- Glyphborn — Core runtime  
+- Mapper — World and content tooling  
+- Glyphborn — Core runtime and gameplay systems  
 
-These components are developed as independent repositories to support isolated updates and long-term maintainability.
+Each component exists in its own repository to allow independent iteration, versioning, and long-term scalability.
 
 ---
 
 ## Project Status
 
-This project is currently in active development.
+Atlas is currently in active development.
 
-The Glyphborn engine will eventually be rebranded and released as:
+The broader Glyphborn engine will eventually be rebranded and released as:
 
 **Damascus — The Steel Editor Suite**
 
