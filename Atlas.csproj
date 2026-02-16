@@ -9,4 +9,8 @@
     <BaseOutputPath>$(SolutionDir)..\Glyphborn\tools\atlas</BaseOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Updater\Updater.csproj" />
+  </ItemGroup>
+
 </Project>
