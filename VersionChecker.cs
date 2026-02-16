@@ -35,7 +35,7 @@ namespace Atlas
 
 		static async Task DownloadUpdateAsync(string version)
 		{
-			string url = $"https://github.com/DoItBetter-Studio/Atlas/releases/download/v{version}/Mapper.zip";
+			string url = $"https://github.com/DoItBetter-Studio/Atlas/releases/download/v{version}/Atlas.zip";
 
 			using var client = new HttpClient();
 			var data = await client.GetByteArrayAsync(url);
